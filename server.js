@@ -15,6 +15,7 @@ const __dirname = path.resolve();
 app.use(express.static(__dirname + '/src'));
 
 
+
 // middlewares
 app.use(cors());
 app.use(express.json());
