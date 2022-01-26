@@ -17,7 +17,55 @@
     <title>Choice coin</title>
     <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+.center {
+		  height:100%;
+		  display:flex;
+		  align-items:center;
+		  justify-content:center;
+		
+		}
+		.form-input {
+		  
+		  
+		  width: 50%;
+		  border-radius: 2px;
+		  background:#fff;
+		  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+					  3px 3px 7px rgba(94, 104, 121, 0.377);
+		}
+		.form-input input {
+		  display:none;
+		
+		}
+		.form-input label {
+		  display:block;
+		  width:100%;
+		  height:45px;
+		  
+		  line-height:50px;
+		  text-align:center;
+		  
+		
+		  color:#fff;
+		  
+		 
+		  text-transform:Uppercase;
+		  font-weight:600;
+		  border-radius:5px;
+		  cursor:pointer;
+		}
+		
+		.form-input img {
+		  width:100%;
+		  border-radius: 2px;
+		  display:none;
+		
+		  margin-bottom:30px;
+		}
+		
+		   
 
         body{    
 
@@ -84,11 +132,7 @@ font-family: 'Poppins', sans-serif;
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     
                     <li class="mr-3">
-                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" style="cursor: pointer;" onclick="electionReset()">Create Proposal</a>
-                    </li>
-                
-                    <li class="mr-3">
-                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" style="cursor: pointer;" onclick="Proposals()">Proposals </a>
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" style="cursor: pointer;" onclick="electionReset()">Create NFT</a>
                     </li>
                     <li class="mr-3">
                         <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" href="https://choice-coin.com/">About Us </a>
@@ -98,28 +142,28 @@ font-family: 'Poppins', sans-serif;
         </nav>
 
           <!-- SCRIPT -->
-    <script
-    src="https://cdn.jsdelivr.net/npm/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"
-    integrity="sha384-w9fodN00YjvWxdNoiyT+W6CqaATkXlfid9tnzBlToDqZWepVWLjI5wO7jNL4+aNs"
-    crossorigin="anonymous"
-    ></script>
-    <script src="./src/algo.js"></script>
-    <script src="./src/app.js"></script>
-    <script src="./src/myalgowallet.js"></script>
-    <script src="./src/algosigner.js"></script>
+            <script
+            src="https://cdn.jsdelivr.net/npm/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"
+            integrity="sha384-w9fodN00YjvWxdNoiyT+W6CqaATkXlfid9tnzBlToDqZWepVWLjI5wO7jNL4+aNs"
+            crossorigin="anonymous"
+            ></script>
+            <script src="./src/algo.js"></script>
+            <script src="./src/app.js"></script>
+            <script src="./src/myalgowallet.js"></script>
+            <script src="./src/algosigner.js"></script>
 
 
-    
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/esm/index.js" integrity="sha256-MihHum5EWA/XtHbareMp0+KgaTuUKDnnYzZO2yaDnaU=" crossorigin="anonymous"></script>
-    <script  src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script> -->
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="./src/algorandmobile.js"></script>
-    <script src="/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/umd/index.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/umd/index.min.js"></script>
+            
+            <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/esm/index.js" integrity="sha256-MihHum5EWA/XtHbareMp0+KgaTuUKDnnYzZO2yaDnaU=" crossorigin="anonymous"></script>
+            <script  src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script> -->
+            
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <script src="./src/algorandmobile.js"></script>
+            <script src="/script.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/umd/index.min.js"></script>
+            <!-- <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/umd/index.min.js"></script>
 
     </body>
    </html>
