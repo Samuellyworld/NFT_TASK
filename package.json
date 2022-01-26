@@ -1,0 +1,17 @@
+{
+  "name": "nft",
+  "version": "1.0.0",
+  "description": "This is my submission for the nft task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samuel aspirin",
+  "license": "ISC",
+  "dependencies": {
+    "algosdk": "^1.13.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
