@@ -1,1 +1,46 @@
 <%- include("./header"); %>
+
+<div class="mt-28">
+    <div class=" flex justify-center items-center mt-5">
+      <div class="w-full max-w-xl">
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+       <div> <h1 class="block text-gray-700 text-xl font-bold mb-2" > Create  Election </h1> </div>
+        <div class="mb-2">
+      
+      <input id="electionTitle" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="electionTitle" type="text" placeholder="Enter TItle"  >
+    </div>
+    <p id="title" class="italic" >please enter a title</p>
+
+	<div class="imageUpload mt-3">
+            
+		<div class="center">
+		 <div class="form-input">
+		   <div class="preview">
+			 <img id="file-ip-1-preview">
+		   </div>
+		   <label id="change" class="bg-gray-700" for="file-ip-1">Upload Image</label>
+		   <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+		   
+		 </div>
+	   </div> 
+		</div>
+     <a href="./addparticipant.html" class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" > Next </a>
+  </div>
+      </div>
+  </div>
+  </div>
+  <script>
+	  function showPreview(event){
+  if(event.target.files.length > 0){
+    let change = document.getElementById("change");
+    let src = URL.createObjectURL(event.target.files[0]);
+    let preview = document.getElementById("file-ip-1-preview");
+    change.innerText = "change image";
+    preview.src = src;
+    
+    preview.style.padding = "20px";
+    preview.style.display = "block";
+  }
+}
+  </script>
+<script src="../script.js"></script>
