@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Choice Coin is an Algorand Standard Asset that powers Decentralized Decisions, a voting and governance software built directly on the Algorand Blockchain">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=https://choice-coin.com/">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <title>Choice coin</title>
+    <style>
+        body{
+            
+font-family: 'Poppins', sans-serif;
+        }
+           canvas{ 
+             display: block;
+             
+             } 
+         #choice{
+             
+              position: absolute;
+         }
+
+
+          #choice-div{ 
+            position:relative;
+            width: 100%; 
+            height: 700px;
+            background-color: #0c0208;
+            background-image: url(""); 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-position: 50% 50%;
+         }
+
+         .closeBtn{
+            font-size: 30px;
+            color: #fff;
+            float: right;
+            }
+
+        .closeBtn:hover,.closeBtn:focus{
+            color: #e439ef;
+            text-decoration: none;
+            cursor:  pointer;
+            }
+        
+      
+    </style>
+    </head>
+    <body>
+        <nav class="home-nav flex items-center justify-between flex-wrap    p-6  w-full z-10 top-0 md:px-20">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a class="text-white flex space-x-2 cursor-pointer no-underline hover:text-white hover:no-underline" href="../index.html">
+            <span style="color: white;"> </span>
+            <h1 class="logo text-3xl text-white " >Choice Coin</h1> 
+                </a>
+            </div>
+    
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2  rounded text-white border-gray-600 hover:text-white hover:border-white">
+                    <?xml version="1.0" ?><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H11" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </button>
+            </div>
+    
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    
+                    <li class="mr-3">
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" style="cursor: pointer;" onclick="electionReset()">Create Proposal</a>
+                    </li>
+                
+                    <li class="mr-3">
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" style="cursor: pointer;" onclick="Proposals()">Proposals </a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" href="https://choice-coin.com/">About Us </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+          <!-- SCRIPT -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"
+    integrity="sha384-w9fodN00YjvWxdNoiyT+W6CqaATkXlfid9tnzBlToDqZWepVWLjI5wO7jNL4+aNs"
+    crossorigin="anonymous"
+    ></script>
+    <script src="./src/algo.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/myalgowallet.js"></script>
+    <script src="./src/algosigner.js"></script>
+
+
+    
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/esm/index.js" integrity="sha256-MihHum5EWA/XtHbareMp0+KgaTuUKDnnYzZO2yaDnaU=" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script> -->
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./src/algorandmobile.js"></script>
+    <script src="/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/umd/index.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.js" integrity="sha256-xlXXs6QTWTcOyiOn/qivryL81nGDj3rYUDXdDXcaXJA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algorand-walletconnect-qrcode-modal@1.6.1/dist/cjs/index.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/client@1.7.0/dist/umd/index.min.js"></script>
+
+
+
+    <script>
+    particlesJS("choice-div", {"particles":{"number":{"value":80,"density":{"enable":false,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":700 + 'px'}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+
+
+    </script>
+        </body>
+        </html>
