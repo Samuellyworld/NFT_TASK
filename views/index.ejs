@@ -71,7 +71,7 @@
     let change = document.getElementById("change");
     let src = URL.createObjectURL(event.target.files[0]);
     let preview = document.getElementById("file-ip-1-preview");
-    change.innerText = "change image";
+    change.textContent = "Change Image";
     preview.src = src;
     
     preview.style.padding = "20px";
