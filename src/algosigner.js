@@ -7,6 +7,8 @@ const algodclient = new algosdk.Algodv2(token, server, port);
 
 const CHOICE_ASSET_ID = 21364625;
 
+let responses;
+
 const algoSignerConnect = async () => {
     try {
       if (typeof window.AlgoSigner === "undefined") {
@@ -54,7 +56,7 @@ const algoSignerConnect = async () => {
   };
 
   const sendCoinBeforeNFT = async () => {
-    if(!respons) {
+    if(!responses) {
         err.textContent= "You need to connect your wallet to create NFT 📵"
         err.classList.add("error_show")
         setTimeout(() => {
@@ -104,7 +106,7 @@ const algoSignerConnect = async () => {
 }
 
 const generateNFT = async () => {
-    if(!respons) {
+    if(!responses) {
         err.textContent= "You need to connect your wallet to create NFT 📵"
         err.classList.add("error_show")
         setTimeout(() => {
@@ -151,7 +153,7 @@ const generateNFT = async () => {
                 tx: signedTxn[0].blob
             });
             if(sendTxn) {
-                success.textContent = `NFT TxID - ${response.txId}`;
+                success.textContent = `NFT TxID - ${sendTxn.txId}`;
                 success.classList.add("success_show");    
             } else {
                 err.textContent= "Error Generating NFT 🏞"

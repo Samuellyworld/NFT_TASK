@@ -175,10 +175,30 @@ const createNFT = async () => {
                 if(response) {
                     success.textContent = `NFT TxID - ${response.txId}`;
                     success.classList.add("success_show");
+                } else {
+                    err.textContent= "Error Generating NFT 🏞"
+                    err.classList.add("error_show")
+                    setTimeout(() => {
+                        err.classList.remove("error_show")
+                    }, 1000) 
                 }
                             
                   }
  
     }
 
-    
+const checkWalletToTransferChoice =  () => {
+    if(respons) {
+        sendChoiceBeforeNFT()
+    } else {
+        sendCoinBeforeNFT()
+    }
+}
+
+const checkWalletToGenerateNFT = () => {
+    if(respons) {
+        createNFT()
+    } else {
+        generateNFT()
+    }
+}
