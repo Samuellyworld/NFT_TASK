@@ -27,10 +27,11 @@ const myAlgoWalletConnect = async () => {
 
     try {
         let response = await myAlgoConnect.connect();
+        dropdownModal.style.display = 'none';
         console.log(response);
         if(response) {
              dropdownModal.style.display = 'none';
-             success.textContent = "Wallet successfully connected";
+             success.textContent = "My AlgoWallet successfully connected";
              success.classList.add("success_show");
              setTimeout(() => {
                  success.classList.remove("success_show");
@@ -43,6 +44,7 @@ const myAlgoWalletConnect = async () => {
             }
         }
     catch (error){
+        dropdownModal.style.display = 'none';
         err.textContent= "Error Connecting to My AlgoWallet 📃 "
         err.classList.add("error_show")
         setTimeout(() => {
@@ -50,4 +52,15 @@ const myAlgoWalletConnect = async () => {
         }, 2000)
         console.log(error);
     }
+}
+
+const createNFT = async () => {
+    
+    if(!respons) {
+        err.textContent= "You need to connect your wallet to vote 📵"
+        err.classList.add("error_show")
+        setTimeout(() => {
+            err.classList.remove("error_show")
+        }, 1000)
+       }
 }
