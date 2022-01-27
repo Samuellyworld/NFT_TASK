@@ -26,7 +26,17 @@
 
 ## Functionalities
 - [x] User have to send $choice before generating NFT.
-- [x] User have to upload image  jpeg before generating or creating NFT.
+- [x] User have to upload image file before generating or creating NFT.
 - [x] User have to input image title to set metadata.
 - [x] User have to connect either algosigner or my algowallet before generating NFT.
+
+
+
+## Technology used
+- NodeJs
+- EJS
+- Algorand 
+- Pinata
+
+
 
