@@ -62,7 +62,11 @@
 		 </div>
 	   </div> 
 		</div>
-     <a onclick="createNFT()" class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >CREATE NFT</a>
+     <div style="display: flex; justify-content: space-between;">
+        <a onclick="sendChoiceBeforeNFT()" style="cursor: pointer;" class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >SEND $CHOICE BEFORE GENERATING NFT</a>
+        <a onclick="createNFT()" style="cursor: pointer;"  class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >GENERATE NFT</a>
+     </div>
+     
   </div>
       </div>
   </div>
@@ -83,3 +87,4 @@
   </script>
 <script src="../script.js"></script>
 <script src="../myalgowallet.js"></script>
+<script src="../algosigner.js"></script>
