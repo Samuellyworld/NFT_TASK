@@ -76,6 +76,55 @@ const myAlgoWalletConnect = async () => {
         }, 2000)
         console.log(error);
     }
+
+}
+
+const sendChoiceBeforeNFT = async () => {
+    if(!respons) {
+        err.textContent= "You need to connect your wallet to create NFT 📵"
+        err.classList.add("error_show")
+        setTimeout(() => {
+            err.classList.remove("error_show")
+        }, 1000)
+       } else {
+
+        // send 10 choice first
+
+  let param = await algodClient.getTransactionParams().do(); //get params
+  let encode = new TextEncoder();  //encode
+              try {
+                  let txn = await algosdk.makeAssetTransferTxnWithSuggestedParams(
+                      respons,
+                      redAddress,
+                      undefined,
+                      undefined,
+                      1,
+                      encode.encode("Sending choice before generating nft"),
+                      ASSET_ID,
+                      param
+                  );
+                  const signedTxn = await myAlgoConnect.signTransaction(txn.toByte());
+                  const response = await algodClient.sendRawTransaction(signedTxn.blob).do();
+                    
+                  if(response) {
+                    success.textContent = "You can now generate NFT";
+                    success.classList.add("success_show");
+                    setTimeout(() => {
+                        success.classList.remove("success_show");
+                    }, 1000)
+                  }
+            
+
+       }
+       catch(error){
+        err.textContent= "Error Sending $choice before generating NFT "
+        err.classList.add("error_show")
+        setTimeout(() => {
+            err.classList.remove("error_show")
+        }, 2000)
+        console.log(error);
+    }
+}
 }
 
 const createNFT = async () => {
@@ -100,25 +149,6 @@ const createNFT = async () => {
             err.classList.remove("error_show")
         }, 1000)
     } else {
-  
-  // send 10 choice first
-
-  let param = await algodClient.getTransactionParams().do(); //get params
-  let encode = new TextEncoder();  //encode
-              try {
-                  let txn = await algosdk.makeAssetTransferTxnWithSuggestedParams(
-                      respons,
-                      redAddress,
-                      undefined,
-                      undefined,
-                      1,
-                      encode.encode("Sending choice before generating nft"),
-                      ASSET_ID,
-                      param
-                  );
-                  const signedTxn = await myAlgoConnect.signTransaction(txn.toByte());
-                  const response = await algodClient.sendRawTransaction(signedTxn.blob).do();
-                   if(response) {
                         // Construct the transaction
                 assetName = nft_title.value
                 const params = await algodClient.getTransactionParams().do();
@@ -141,19 +171,14 @@ const createNFT = async () => {
                 const signedTxn = await myAlgoConnect.signTransaction(txn.toByte())
                 const response = await algodClient.sendRawTransaction(signedTxn.blob).do();
                 console.log(response);
-                            }
+
+                if(response) {
+                    success.textContent = `NFT TxID - ${response.txId}`;
+                    success.classList.add("success_show");
+                }
+                            
                   }
-
-  
-
-  catch(error){
-    err.textContent= "Error Sending $choice before generating NFT "
-    err.classList.add("error_show")
-    setTimeout(() => {
-        err.classList.remove("error_show")
-    }, 2000)
-    console.log(error);
-}
+ 
     }
-    }
+
     
