@@ -22,7 +22,8 @@
 
 ## check preview video on youtube
 
-- check video on [youtube]()
+- check video on [youtube](https://www.youtube.com/watch?v=EuDhvQXkAQQ)
+
 
 ## Functionalities
 - [x] User have to send $choice before generating NFT.
